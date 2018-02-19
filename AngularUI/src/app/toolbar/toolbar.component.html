@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Chat as </span>
+    <mat-form-field style="margin-left:5px;bottom: -4px;">
+      <input matInput placeholder="Stranger" (change)="changeUsername($event)" [(ngModel)]="username">
+    </mat-form-field>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+
