@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {SocketService} from './socket.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  constructor(private _socketService: SocketService) {
+    if (localStorage.getItem('chat-username')) {
+      _socketService.setUsername(localStorage.getItem('chat-username'));
+    }
+  }
 }

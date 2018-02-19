@@ -1,0 +1,13 @@
+<div fxLayout="column" fxFill>
+  <app-messages fxFlex></app-messages>
+
+  <div fxLayout="row">
+    <mat-form-field fxFlex>
+      <textarea matInput placeholder="Write down your message here..." matTextareaAutosize matAutosizeMinRows="1"
+                matAutosizeMaxRows="5" [(ngModel)]="msg" (keyup)="textAreaKeyup($event)" (keydown)="textAreaKeydown($event)"></textarea>
+    </mat-form-field>
+    <button mat-icon-button color="primary" (click)="sendMessage()">
+      <mat-icon aria-label="Send">send</mat-icon>
+    </button>
+  </div>
+</div>
