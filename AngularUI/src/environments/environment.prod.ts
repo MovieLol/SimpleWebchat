@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  socketServer: 'wss://plauder.serverlein.de'
+  socketServer: 'https://plauder.serverlein.de'
 };
