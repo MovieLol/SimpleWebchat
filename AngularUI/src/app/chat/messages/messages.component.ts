@@ -15,7 +15,12 @@ export class MessagesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._SocketService.MessageList.subscribe(newMsg => this.MessageList.push(newMsg));
+    this._SocketService.MessageList.subscribe(newMsg => {
+      this.MessageList.push(newMsg);
+    });
   }
 
 }
+
+
+

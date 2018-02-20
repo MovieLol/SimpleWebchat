@@ -21,11 +21,14 @@ io.on('connection', function(socket){
   });
 
   socket.on('message', function(msg){
+    if(msg.length < 1){
+      return;
+    }
     io.sockets.emit('message', socket.name, msg);
   });
 
   socket.on('username', function(newUsername){
-    if(newUsername.length > 10 || newUsername.length <= 0){
+    if(newUsername.length > 20 || newUsername.length <= 0){
       return;
     }
     var index = userlist.indexOf(socket.name);

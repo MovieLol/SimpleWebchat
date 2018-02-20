@@ -1,6 +1,8 @@
 <div fxLayout="column" fxFill>
-  <app-messages fxFlex></app-messages>
-
+  <div fxFlex fxLayout="row">
+    <app-messages fxFlex #msgContainer></app-messages>
+    <app-userlist></app-userlist>
+  </div>
   <div fxLayout="row">
     <mat-form-field fxFlex>
       <textarea matInput placeholder="Write down your message here..." matTextareaAutosize matAutosizeMinRows="1"

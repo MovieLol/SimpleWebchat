@@ -34,7 +34,7 @@ export class SocketService {
   }
 
   public setUsername(newUsername: string): void {
-    if (newUsername.length > 10) {
+    if (newUsername.length > 20) {
       return;
     }
     this._socket.emit('username', newUsername);
